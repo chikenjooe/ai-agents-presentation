@@ -9,13 +9,16 @@
 
   <style>
     :root{
-      --bg:#0B1020;
-      --panel: rgba(255,255,255,.06);
-      --stroke: rgba(255,255,255,.10);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.72);
-      --accent: #6AF0FF;
-      --accent2:#9B7BFF;
+      --bg:#F7F9FC;
+      --paper:#FFFFFF;
+      --ink:#0B1220;
+      --ink2:#24324A;
+      --panel: rgba(11,18,32,.04);
+      --stroke: rgba(11,18,32,.10);
+      --text: rgba(11,18,32,.92);
+      --muted: rgba(36,50,74,.72);
+      --accent: #1E63FF;
+      --accent2:#7B5CFF;
       --good:#5CFF9A;
       --warn:#FFCC66;
       --shadow: 0 24px 80px rgba(0,0,0,.55);
@@ -31,7 +34,7 @@
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, "Noto Sans";
       background: var(--bg);
-      color: var(--text);
+      color: var(--ink);
       overflow:hidden; /* we manage scroll in the slider */
     }
 
@@ -43,10 +46,10 @@
       pointer-events:none;
       z-index:-1;
       background:
-        radial-gradient(900px 600px at 18% 10%, rgba(106,240,255,.16), transparent 60%),
-        radial-gradient(900px 620px at 82% 20%, rgba(155,123,255,.14), transparent 62%),
+        radial-gradient(900px 600px at 18% 10%, rgba(30,99,255,.10), transparent 60%),
+        radial-gradient(900px 620px at 82% 20%, rgba(123,92,255,.10), transparent 62%),
         radial-gradient(900px 700px at 50% 110%, rgba(255,255,255,.06), transparent 65%),
-        linear-gradient(180deg, rgba(255,255,255,.02), transparent 35%),
+        linear-gradient(180deg, rgba(11,18,32,.02), transparent 35%),
         var(--bg);
     }
 
@@ -60,8 +63,8 @@
       right:0;
       z-index:10;
       backdrop-filter: blur(10px);
-      background: rgba(11,16,32,.55);
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      background: rgba(247,249,252,.78);
+      border-bottom: 1px solid rgba(11,18,32,.08);
     }
     .top{
       max-width: var(--max);
@@ -84,7 +87,7 @@
       width:26px;height:26px;border-radius:10px;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       box-shadow: 0 0 30px rgba(106,240,255,.18);
-      border: 1px solid rgba(255,255,255,.12);
+      border: 1px solid rgba(11,18,32,.10);
     }
     .meta{
       display:flex;
@@ -97,15 +100,15 @@
       font-size:12px;
       padding: 8px 10px;
       border-radius:999px;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      color: rgba(255,255,255,.84);
+      background: rgba(11,18,32,.04);
+      border:1px solid rgba(11,18,32,.10);
+      color: rgba(36,50,74,.78);
     }
     .pill b{color: rgba(255,255,255,.95)}
     .navbtn{
       border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: rgba(255,255,255,.92);
+      background: rgba(11,18,32,.04);
+      color: rgba(11,18,32,.92);
       padding: 9px 12px;
       border-radius: 999px;
       font-weight: 800;
@@ -137,8 +140,8 @@
       -webkit-overflow-scrolling: touch;
     }
     .track::-webkit-scrollbar{height: 10px}
-    .track::-webkit-scrollbar-thumb{background: rgba(255,255,255,.14); border-radius:999px}
-    .track::-webkit-scrollbar-track{background: rgba(255,255,255,.05)}
+    .track::-webkit-scrollbar-thumb{background: rgba(11,18,32,.14); border-radius:999px}
+    .track::-webkit-scrollbar-track{background: rgba(11,18,32,.06)}
 
     .slide{
       flex: 0 0 auto;
@@ -146,8 +149,8 @@
       height: var(--slideH);
       scroll-snap-align: center;
       border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(11,18,32,.10);
+      background: rgba(11,18,32,.06);
       box-shadow: var(--shadow);
       overflow:hidden;
       position:relative;
@@ -161,8 +164,8 @@
       inset:-1px;
       pointer-events:none;
       border-radius: var(--radius);
-      background: radial-gradient(700px 300px at 20% 0%, rgba(106,240,255,.12), transparent 60%),
-                  radial-gradient(700px 320px at 80% 15%, rgba(155,123,255,.12), transparent 62%);
+      background: radial-gradient(700px 300px at 20% 0%, rgba(30,99,255,.08), transparent 60%),
+                  radial-gradient(700px 320px at 80% 15%, rgba(123,92,255,.07), transparent 62%);
       opacity:.9;
     }
 
@@ -179,13 +182,13 @@
       font-size:12px;
       letter-spacing:.14em;
       text-transform:uppercase;
-      color: rgba(255,255,255,.72);
+      color: rgba(36,50,74,.72);
     }
     .idx{
       font-size:12px;
-      color: rgba(255,255,255,.72);
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.18);
+      color: rgba(36,50,74,.72);
+      border:1px solid rgba(11,18,32,.10);
+      background: rgba(11,18,32,.03);
       padding: 7px 10px;
       border-radius:999px;
       white-space:nowrap;
@@ -206,7 +209,7 @@
     }
     p{
       margin:0;
-      color: rgba(255,255,255,.80);
+      color: rgba(36,50,74,.92);
       line-height:1.5;
       font-size: 16px;
       max-width: 78ch;
@@ -220,13 +223,19 @@
     }
 
     .card{
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.18);
+      border: 1px solid rgba(11,18,32,.10);
+      background: rgba(11,18,32,.03);
       border-radius: 18px;
       padding: 14px;
     }
     .card h3{margin:0 0 6px; font-size:16px; letter-spacing:-.01em}
-    .card ul{margin:0; padding-left: 18px; color: rgba(255,255,255,.78); line-height:1.55}
+    .card ul{margin:0; padding-left: 18px; color: rgba(36,50,74,.86); line-height:1.55}
+
+    /* visuals */
+    .viz{border:1px solid rgba(11,18,32,.10); background: linear-gradient(180deg, rgba(30,99,255,.06), rgba(255,255,255,.0)); border-radius: 18px; padding: 12px; overflow:hidden;}
+    .viz svg{width:100%; height:auto; display:block;}
+    .caption{font-size:12px; color: rgba(36,50,74,.72); margin-top:8px}
+
 
     .metric{display:flex; align-items:baseline; justify-content:space-between; gap:10px;}
     .metric b{font-size: 18px}
@@ -237,14 +246,14 @@
       gap:8px;
       align-items:center;
       font-size: 12px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(11,18,32,.10);
+      background: rgba(11,18,32,.06);
       padding: 7px 10px;
       border-radius: 999px;
-      color: rgba(255,255,255,.84);
+      color: rgba(36,50,74,.78);
       width: fit-content;
     }
-    .dot{width:8px;height:8px;border-radius:999px;background: var(--accent); box-shadow:0 0 18px rgba(106,240,255,.35)}
+    .dot{width:8px;height:8px;border-radius:999px;background: var(--accent); box-shadow:0 0 18px rgba(30,99,255,.20)}
 
     .sFoot{
       padding: 12px 20px 18px;
@@ -254,8 +263,8 @@
       gap:12px;
       color: rgba(255,255,255,.64);
       font-size: 12px;
-      border-top: 1px solid rgba(255,255,255,.06);
-      background: rgba(0,0,0,.14);
+      border-top: 1px solid rgba(11,18,32,.08);
+      background: rgba(11,18,32,.02);
     }
 
     .cta{
@@ -266,8 +275,8 @@
     }
     .btn{
       border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: rgba(255,255,255,.92);
+      background: rgba(11,18,32,.04);
+      color: rgba(11,18,32,.92);
       padding: 10px 14px;
       border-radius: 999px;
       font-weight: 850;
@@ -278,7 +287,7 @@
     .btn.primary{
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       border-color: transparent;
-      color: #0b1020;
+      color: #ffffff;
     }
 
     .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.22)}
@@ -294,15 +303,15 @@
       gap: 8px;
       padding: 10px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.35);
+      border: 1px solid rgba(11,18,32,.10);
+      background: rgba(255,255,255,.72);
       backdrop-filter: blur(10px);
       z-index: 9;
       max-width: min(92vw, 760px);
       overflow:auto;
     }
     .dots::-webkit-scrollbar{height:6px}
-    .dots::-webkit-scrollbar-thumb{background: rgba(255,255,255,.14); border-radius:999px}
+    .dots::-webkit-scrollbar-thumb{background: rgba(11,18,32,.14); border-radius:999px}
     .d{
       width: 10px;
       height: 10px;
@@ -429,16 +438,45 @@
 
       <!-- 4 -->
       <section class="slide" data-title="ROI model">
+
         <div class="sHead"><div class="kicker">ROI</div><div class="idx">04 / 14</div></div>
         <div class="sBody">
           <h2>ROI is usually obvious in 2–4 weeks.</h2>
           <p>We pick one workflow with measurable throughput and ship a pilot. Then scale to adjacent workflows.</p>
           <div class="grid2">
-            <div class="card">
-              <div class="metric"><b>30–70%</b><span>lower processing cost</span></div>
-              <div class="metric"><b>2–10×</b><span>faster cycle time</span></div>
-              <div class="metric"><b>20–40%</b><span>fewer errors / rework</span></div>
-            </div>
+            <div class="viz">
+              <svg viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ROI chart">
+                <defs>
+                  <linearGradient id="g" x1="0" x2="1">
+                    <stop offset="0" stop-color="#1E63FF"/>
+                    <stop offset="1" stop-color="#7B5CFF"/>
+                  </linearGradient>
+                </defs>
+                <rect x="0" y="0" width="720" height="260" fill="#FFFFFF"/>
+                <g fill="none" stroke="rgba(11,18,32,.10)" stroke-width="1">
+                  <path d="M60 30V220H680"/>
+                  <path d="M60 170H680"/>
+                  <path d="M60 120H680"/>
+                  <path d="M60 70H680"/>
+                </g>
+                <g>
+                  <text x="60" y="245" font-size="12" fill="rgba(36,50,74,.72)">Week 0</text>
+                  <text x="210" y="245" font-size="12" fill="rgba(36,50,74,.72)">Week 2</text>
+                  <text x="360" y="245" font-size="12" fill="rgba(36,50,74,.72)">Week 4</text>
+                  <text x="510" y="245" font-size="12" fill="rgba(36,50,74,.72)">Week 6</text>
+                  <text x="660" y="245" font-size="12" fill="rgba(36,50,74,.72)">Week 8</text>
+                </g>
+                <path d="M60 200 C150 190, 210 170, 300 150 S480 110, 540 95 S640 80, 680 70" stroke="url(#g)" stroke-width="5" fill="none"/>
+                <g fill="#1E63FF">
+                  <circle cx="60" cy="200" r="5"/>
+                  <circle cx="300" cy="150" r="5"/>
+                  <circle cx="540" cy="95" r="5"/>
+                  <circle cx="680" cy="70" r="5"/>
+                </g>
+                <text x="62" y="24" font-size="14" fill="rgba(36,50,74,.88)" font-weight="700">Operational cost per item (index)</text>
+              </svg>
+              <div class="caption">Example trajectory after pilot launch: lower cost, faster throughput, fewer errors.</div>
+            </div></div>
             <div class="card">
               <h3>What CFO cares about</h3>
               <ul>
@@ -502,6 +540,29 @@
         <div class="sBody">
           <h2>A practical delivery model.</h2>
           <p>No “big bang”. We ship value in weeks, then compound.</p>
+          <div class="viz">
+            <svg viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Delivery timeline">
+              <rect x="0" y="0" width="720" height="160" fill="#FFFFFF"/>
+              <g stroke="rgba(11,18,32,.12)" stroke-width="2" fill="none">
+                <path d="M60 80H660"/>
+              </g>
+              <g>
+                <circle cx="110" cy="80" r="10" fill="#1E63FF"/>
+                <circle cx="280" cy="80" r="10" fill="#1E63FF"/>
+                <circle cx="450" cy="80" r="10" fill="#1E63FF"/>
+                <circle cx="620" cy="80" r="10" fill="#7B5CFF"/>
+                <text x="90" y="52" font-size="12" fill="rgba(36,50,74,.78)">Days 1–5</text>
+                <text x="245" y="52" font-size="12" fill="rgba(36,50,74,.78)">Weeks 2–4</text>
+                <text x="420" y="52" font-size="12" fill="rgba(36,50,74,.78)">Month 2+</text>
+                <text x="590" y="52" font-size="12" fill="rgba(36,50,74,.78)">Ongoing</text>
+                <text x="78" y="118" font-size="13" font-weight="700" fill="rgba(36,50,74,.90)">Discovery</text>
+                <text x="252" y="118" font-size="13" font-weight="700" fill="rgba(36,50,74,.90)">Pilot</text>
+                <text x="420" y="118" font-size="13" font-weight="700" fill="rgba(36,50,74,.90)">Scale</text>
+                <text x="585" y="118" font-size="13" font-weight="700" fill="rgba(36,50,74,.90)">Optimize</text>
+              </g>
+            </svg>
+            <div class="caption">Delivery timeline (typical): ship a pilot fast, then compound value.</div>
+          </div>
           <div class="grid2">
             <div class="card">
               <h3>Phase 1 — Discovery (3–5 days)</h3>
@@ -564,6 +625,43 @@
                 <li>Approvals for payments / deletions</li>
               </ul>
             </div>
+          </div>
+          <div class="viz">
+            <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture diagram">
+              <defs>
+                <linearGradient id="gg" x1="0" x2="1">
+                  <stop offset="0" stop-color="#1E63FF"/>
+                  <stop offset="1" stop-color="#7B5CFF"/>
+                </linearGradient>
+              </defs>
+              <rect x="0" y="0" width="720" height="220" fill="#FFFFFF"/>
+              <g font-size="12" fill="rgba(36,50,74,.86)" font-weight="700">
+                <rect x="40" y="40" width="160" height="60" rx="14" fill="rgba(11,18,32,.03)" stroke="rgba(11,18,32,.12)"/>
+                <text x="60" y="74">Email / Slack</text>
+
+                <rect x="240" y="40" width="200" height="60" rx="14" fill="rgba(11,18,32,.03)" stroke="rgba(11,18,32,.12)"/>
+                <text x="260" y="74">Agent Orchestrator</text>
+
+                <rect x="480" y="24" width="200" height="60" rx="14" fill="rgba(30,99,255,.08)" stroke="rgba(30,99,255,.22)"/>
+                <text x="500" y="58">CRM / ERP</text>
+
+                <rect x="480" y="96" width="200" height="60" rx="14" fill="rgba(123,92,255,.07)" stroke="rgba(123,92,255,.20)"/>
+                <text x="500" y="130">Docs / Files</text>
+
+                <rect x="240" y="120" width="200" height="60" rx="14" fill="rgba(11,18,32,.03)" stroke="rgba(11,18,32,.12)"/>
+                <text x="260" y="154">Audit + Metrics</text>
+
+                <rect x="40" y="120" width="160" height="60" rx="14" fill="rgba(11,18,32,.03)" stroke="rgba(11,18,32,.12)"/>
+                <text x="60" y="154">Approvals</text>
+              </g>
+              <g stroke="url(#gg)" stroke-width="3" fill="none" opacity=".95">
+                <path d="M200 70H240"/>
+                <path d="M440 70H480"/>
+                <path d="M440 140H480"/>
+                <path d="M200 150H240"/>
+              </g>
+            </svg>
+            <div class="caption">Reference architecture: connectors + orchestrator + audited actions across systems.</div>
           </div>
           <div class="tag"><span class="dot" style="background:var(--good)"></span> Designed to be safe, measurable, and maintainable</div>
         </div>
